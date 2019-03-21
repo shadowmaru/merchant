@@ -1,5 +1,3 @@
-require_relative 'galactic_number_converter'
-
 # Answers the question of value
 # e.g. 'how much is pish tegj glob glob ?'
 class ValueQuestionProcessor

@@ -1,8 +1,3 @@
-require_relative './value_attribution_processor'
-require_relative './currency_attribution_processor'
-require_relative './value_question_processor'
-require_relative './currency_question_processor'
-
 # Decides which class will handle the input
 class OperationDelegator
   def self.call(phrase_type, phrase)

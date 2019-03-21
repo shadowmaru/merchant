@@ -1,5 +1,3 @@
-require_relative 'roman_number_converter'
-
 # Converts galactic numbers to arabic numbers
 class GalacticNumberConverter
   def self.call(numbers)

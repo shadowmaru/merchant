@@ -1,10 +1,14 @@
 require_relative './input_parser'
+require_relative './roman_number_converter'
+require_relative './galactic_number_converter'
 require_relative './operation_delegator'
+require_relative './value_attribution_processor'
+require_relative './value_question_processor'
+require_relative './currency_attribution_processor'
+require_relative './currency_question_processor'
 
 # Supplies the output of the program
 class Merchant
-  ATTRIBUTIONS = %I[value_attribution currency_attribution].freeze
-
   # Hash to store attributions of galactic numbers to Roman numbers
   # glob: I, prok: V
   @galactic_numbers = {}
