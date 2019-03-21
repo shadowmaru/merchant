@@ -3,7 +3,6 @@ require 'merchant'
 RSpec.describe Merchant, '.call' do
   context 'valid input' do
     it 'returns the answers' do
-      pending 'final answer'
       phrases = [
         'glob is I',
         'prok is V',

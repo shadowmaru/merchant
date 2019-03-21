@@ -1,5 +1,5 @@
-require 'merchant'
-require 'galactic_number_converter'
+require_relative 'merchant'
+require_relative 'galactic_number_converter'
 
 # Stores the currency attribution
 # e.g. 'glob glob Silver is 34 Credits'
