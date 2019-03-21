@@ -3,9 +3,11 @@
 require './lib/merchant'
 
 def process_input(file_name)
+  lines = []
   File.open(file_name, 'r').each_line do |line|
-    puts Merchant.call(line)
+    lines << line
   end
+  puts Merchant.call(lines)
 end
 
 if ARGV.empty?

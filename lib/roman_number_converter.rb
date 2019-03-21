@@ -17,7 +17,7 @@ class RomanNumberConverter
   end
 
   def call
-    return nil unless @number.match?(ROMAN_REGEX)
+    return nil unless @number&.match?(ROMAN_REGEX)
 
     arabic = 0
     ROMANS.each do |key, value|

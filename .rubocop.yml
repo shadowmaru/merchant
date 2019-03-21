@@ -4258,7 +4258,7 @@ Style/TrailingUnderscoreVariable:
 Style/TrivialAccessors:
   Description: 'Prefer attr_* methods to trivial readers/writers.'
   StyleGuide: '#attr_family'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.9'
   VersionChanged: '0.38'
   # When set to `false` the cop will suggest the use of accessor methods
