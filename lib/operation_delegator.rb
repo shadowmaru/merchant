@@ -1,5 +1,7 @@
 # Decides which class will handle the input
 class OperationDelegator
+  private_class_method :new
+
   def self.call(phrase_type, phrase)
     new(phrase_type, phrase).call
   end

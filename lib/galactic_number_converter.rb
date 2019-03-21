@@ -1,5 +1,7 @@
 # Converts galactic numbers to arabic numbers
 class GalacticNumberConverter
+  private_class_method :new
+
   def self.call(numbers)
     new(numbers).call
   end

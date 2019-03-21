@@ -1,6 +1,8 @@
 # Stores the value attribution
 # e.g. 'glob is I'
 class ValueAttributionProcessor
+  private_class_method :new
+
   def self.call(phrase)
     new(phrase).call
   end

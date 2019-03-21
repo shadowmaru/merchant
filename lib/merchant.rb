@@ -9,6 +9,8 @@ require_relative './currency_question_processor'
 
 # Supplies the output of the program
 class Merchant
+  private_class_method :new
+
   # Hash to store attributions of galactic numbers to Roman numbers
   # glob: I, prok: V
   @galactic_numbers = {}
@@ -34,9 +36,7 @@ class Merchant
   end
 
   def call
-    @phrases.map do |phrase|
-      process_phrase(phrase)
-    end.compact
+    @phrases.map { |phrase| process_phrase(phrase) }.compact
   end
 
   def process_phrase(phrase)

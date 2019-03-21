@@ -2,6 +2,8 @@
 # e.g. 'how many Credits is glob prok Silver ?'
 # => 'glob prok Silver is 68 Credits'
 class CurrencyQuestionProcessor
+  private_class_method :new
+
   def self.call(phrase)
     new(phrase).call
   end
@@ -17,6 +19,8 @@ class CurrencyQuestionProcessor
 
     "#{value} is #{value_in_arabic(numbers, currency)} Credits"
   end
+
+  private
 
   def value_in_arabic(numbers, currency)
     value = GalacticNumberConverter.call(numbers)

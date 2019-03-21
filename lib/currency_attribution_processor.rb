@@ -2,6 +2,8 @@
 # e.g. 'glob glob Silver is 34 Credits'
 # { 'Silver': 17 }
 class CurrencyAttributionProcessor
+  private_class_method :new
+
   def self.call(phrase)
     new(phrase).call
   end
