@@ -51,5 +51,13 @@ RSpec.describe Merchant, '.call' do
           .to eq(['I have no idea what you are talking about'])
       end
     end
+
+    context 'invalid credit quantities' do
+      it 'returns error message' do
+        phrase = 'glob prok Gold is lalala Credits'
+        expect(described_class.call([phrase]))
+          .to eq(['I have no idea what you are talking about'])
+      end
+    end
   end
 end
