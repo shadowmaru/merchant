@@ -9,6 +9,8 @@ require_relative './currency_question_processor'
 
 # Supplies the output of the program
 class Merchant
+  ERROR_MESSAGE = 'I have no idea what you are talking about'.freeze
+
   private_class_method :new
 
   # Hash to store attributions of galactic numbers to Roman numbers
@@ -42,7 +44,7 @@ class Merchant
   def process_phrase(phrase)
     phrase_type = InputParser.call(phrase)
 
-    return 'I have no idea what you are talking about' if phrase_type == :error
+    return ERROR_MESSAGE if phrase_type == :error
 
     answer(phrase_type, phrase)
   end

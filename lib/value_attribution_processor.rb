@@ -13,8 +13,17 @@ class ValueAttributionProcessor
 
   def call
     value_in_galactic, value_in_roman = @phrase.split(' is ')
+
+    return Merchant::ERROR_MESSAGE unless valid?(value_in_roman)
+
     Merchant.galactic_numbers[value_in_galactic] = value_in_roman.strip
 
     nil
+  end
+
+  private
+
+  def valid?(value_in_roman)
+    RomanNumberConverter.valid_single?(value_in_roman)
   end
 end

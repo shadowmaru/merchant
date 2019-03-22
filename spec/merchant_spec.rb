@@ -35,5 +35,21 @@ RSpec.describe Merchant, '.call' do
       expect(described_class.call([phrase]))
         .to eq(['I have no idea what you are talking about'])
     end
+
+    context 'question not covered' do
+      it 'returns error message' do
+        phrase = 'how come this is a test ?'
+        expect(described_class.call([phrase]))
+          .to eq(['I have no idea what you are talking about'])
+      end
+    end
+
+    context 'compound roman number' do
+      it 'returns error message' do
+        phrase = 'glob is VII'
+        expect(described_class.call([phrase]))
+          .to eq(['I have no idea what you are talking about'])
+      end
+    end
   end
 end
